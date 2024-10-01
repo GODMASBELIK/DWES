@@ -16,6 +16,18 @@
         span {
             font-weight: bold;
         }
+
+        text {
+            font-size: 6rem;
+        }
+
+        td,tr,table {
+border: 1px solid black;
+        }
+
+        div {
+            display: flex;
+        }
     </style>
 </head>
 
@@ -71,7 +83,7 @@
         {
             $this->color = $color;
             return $this;
-        } 
+        }
 
         public function getSize()
         {
@@ -81,20 +93,25 @@
 
     $colors = array("red", "black", "green", "blue", "yellow", "brown", "pink", "purple");
 
-    $circle = new Circle(rand(10, 50), rand(40, 900), rand(40, 900), $colors[rand(0, 7)]);
-    $circle2 = new Circle(rand(10, 50), rand(40, 900), rand(40, 900), $colors[rand(0, 7)]);
-    $circle3 = new Circle(rand(10, 50), rand(40, 900), rand(40, 900), $colors[rand(0, 7)]);
-    $circle4 = new Circle(rand(10, 50), rand(40, 900), rand(40, 900), $colors[rand(0, 7)]);
-    $circle5 = new Circle(rand(10, 50), rand(40, 900), rand(40, 900), $colors[rand(0, 7)]);
+    echo "<table>";
+    echo "<tr>";
 
-    echo "<svg height=\"1000\" width=\"2000\" xmlns=\"http://www.w3.org/2000/svg\">";
-    echo "<circle r=\"" . $circle->getSize() . "\" cx=\"" . $circle->getPosX() . "\" cy=\"" . $circle->getPosY() . "\" fill=\"" . $circle->getColor() . "\" />";
-    echo "<circle r=\"" . $circle2->getSize() . "\" cx=\"" . $circle2->getPosX() . "\" cy=\"" . $circle2->getPosY() . "\" fill=\"" . $circle2->getColor() . "\" />";
-    echo "<circle r=\"" . $circle3->getSize() . "\" cx=\"" . $circle3->getPosX() . "\" cy=\"" . $circle3->getPosY() . "\" fill=\"" . $circle3->getColor() . "\" />";
-    echo "<circle r=\"" . $circle4->getSize() . "\" cx=\"" . $circle4->getPosX() . "\" cy=\"" . $circle4->getPosY() . "\" fill=\"" . $circle4->getColor() . "\" />";
-    echo "<circle r=\"" . $circle5->getSize() . "\" cx=\"" . $circle5->getPosX() . "\" cy=\"" . $circle5->getPosY() . "\" fill=\"" . $circle5->getColor() . "\" />";
+for ($i=0; $i <= rand(0,10); $i++) { 
+    echo "<td>";
+    echo "<svg height=\"200\" width=\"200\" xmlns=\"http://www.w3.org/2000/svg\">";
+    $circle = new Circle(rand(40, 80), 95, 95, $colors[rand(0,7)]);
+    $rot = rand(-80, 80);
+   echo "<div>";
+        echo "<circle r=\"" . $circle->getSize() . "\" cx=\"" . $circle->getPosX() . "\" cy=\"" . $circle->getPosY() . "\" fill=\"" . $circle->getColor() . "\">";
+        echo "</circle>";
+        echo '<text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="' . $colors[rand(0,7)] . '" transform="rotate('. $rot.')">' . $i+1 . '</text>';
+    echo "</div>";
+    echo "</td>";
     echo "</svg>";
+}
+echo "</tr>";
 
+    echo "</table>";
     ?>
 
 </body>

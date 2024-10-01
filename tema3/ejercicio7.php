@@ -71,7 +71,7 @@
         {
             $this->color = $color;
             return $this;
-        } 
+        }
 
         public function getSize()
         {
@@ -80,21 +80,20 @@
     }
 
     $colors = array("red", "black", "green", "blue", "yellow", "brown", "pink", "purple");
+$i = rand(1,10);
 
-    $circle = new Circle(rand(10, 50), rand(40, 900), rand(40, 900), $colors[rand(0, 7)]);
-    $circle2 = new Circle(rand(10, 50), rand(40, 900), rand(40, 900), $colors[rand(0, 7)]);
-    $circle3 = new Circle(rand(10, 50), rand(40, 900), rand(40, 900), $colors[rand(0, 7)]);
-    $circle4 = new Circle(rand(10, 50), rand(40, 900), rand(40, 900), $colors[rand(0, 7)]);
-    $circle5 = new Circle(rand(10, 50), rand(40, 900), rand(40, 900), $colors[rand(0, 7)]);
-
-    echo "<svg height=\"1000\" width=\"2000\" xmlns=\"http://www.w3.org/2000/svg\">";
-    echo "<circle r=\"" . $circle->getSize() . "\" cx=\"" . $circle->getPosX() . "\" cy=\"" . $circle->getPosY() . "\" fill=\"" . $circle->getColor() . "\" />";
-    echo "<circle r=\"" . $circle2->getSize() . "\" cx=\"" . $circle2->getPosX() . "\" cy=\"" . $circle2->getPosY() . "\" fill=\"" . $circle2->getColor() . "\" />";
-    echo "<circle r=\"" . $circle3->getSize() . "\" cx=\"" . $circle3->getPosX() . "\" cy=\"" . $circle3->getPosY() . "\" fill=\"" . $circle3->getColor() . "\" />";
-    echo "<circle r=\"" . $circle4->getSize() . "\" cx=\"" . $circle4->getPosX() . "\" cy=\"" . $circle4->getPosY() . "\" fill=\"" . $circle4->getColor() . "\" />";
-    echo "<circle r=\"" . $circle5->getSize() . "\" cx=\"" . $circle5->getPosX() . "\" cy=\"" . $circle5->getPosY() . "\" fill=\"" . $circle5->getColor() . "\" />";
+    echo "<table>";
+    echo "<tr>";
+    while (--$i != 0) {
+        echo "<td>";
+    echo "<svg height=\"300\" width=\"300\" xmlns=\"http://www.w3.org/2000/svg\">";
+        $circle = new Circle(rand(40, 80), 75, 75, $colors[rand(0, 7)]);
+        echo "<circle r=\"" . $circle->getSize() . "\" cx=\"" . $circle->getPosX() . "\" cy=\"" . $circle->getPosY() . "\" fill=\"" . $circle->getColor() . "\" />";
+        echo "</td>";
     echo "</svg>";
-
+    }
+    echo "</tr>";
+    echo "</table>";
     ?>
 
 </body>

@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+}
+
+ul,
+ul li {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+h1,
+h2,
+h3,
+p,
+form {
+    margin: 0;
+    padding: 0
+}
+
+.clear {
+    clear: both
+}
+
+img {
+    border: none
+}
+
+#contenedor {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto
+}
+
+
+#cabecera {
+    clear: both;
+    padding: 1em;
+
+}
+
+#menu {
+    border-bottom: 1px solid #004C99;
+    clear: both;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+#lateral {
+    float: left;
+    width: 20%;
+    border: 1px solid #CC6600;
+}
+
+#contenido {
+    float: right;
+    width: 78%
+}
+
+#contenido #principal {
+    float: left;
+    width: 78%
+}
+
+#contenido #secundario {
+    float: right;
+    width: 20%
+}
+
+#pie {
+    clear: both
+}
+
+#cabecera #logo {
+    float: left
+}
+
+#cabecera #buscador {
+    float: right
+}
+
+#menu ul#menu_principal li {
+    display: inline;
+    float: left
+}
+
+#contenido #principal .articulo img {
+    width: 100px;
+    float: left
+}
+
+#pie .enlaces {
+    float: left
+}
+
+#pie .copyright {
+    float: right
+}
+
+#noticias, #publicidad, #principal, #secundario {
+    padding: 0.5em;
+}
+
+#noticias {
+    border: 1px solid #C5C5C5;
+}
+
+    #pie {
+        padding: 0.5em 0;
+    }
+
+.articulo {
+    gap: 1em;
+}
+
+.articulo img {
+    margin: 0.5em;
+}
+
+#publicidad {
+    margin-top: 1em;
+    border: 1px dotted #CC6600;
+}
+
+#pie {
+    margin-top: 1em;
+    border-top: 1px solid #C5C5C5;
+    border-bottom: 1px solid #C5C5C5;
+}
+
+#noticias > *, #pie > * {
+    background-color: #F8F8F8;
+}
+
+#publicidad{
+    background-color: #FFF6CD;
+}
+
+/*deberia ser h3 para que se mostrara*/
+#lateral h2 {
+background-color: #DB905C;
+padding: .2em;
+}
+
+#menu {
+    background-image: url("fondo_menu.gif");
+}
+
+#cabecera {
+    position: relative;
+}
+
+#cabecera::after {
+    content: ' ';
+    position: absolute;
+    width: 230px;
+    height: 200px;
+    top: -70px;
+    left: -30px;
+    z-index: -1;
+    background: url("logo.gif") 0 0px no-repeat;
+    background-size: cover;
+
+}
