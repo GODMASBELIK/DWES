@@ -49,7 +49,6 @@ img {
 #lateral {
     float: left;
     width: 20%;
-    border: 1px solid #CC6600;
 }
 
 #contenido {
@@ -102,7 +101,7 @@ img {
 }
 
 #noticias {
-    border: 1px solid #C5C5C5;
+    border: 1px dotted #C5C5C5;
 }
 
     #pie {
@@ -110,7 +109,7 @@ img {
     }
 
 .articulo {
-    gap: 1em;
+    margin-bottom: 1em;
 }
 
 .articulo img {
@@ -119,7 +118,8 @@ img {
 
 #publicidad {
     margin-top: 1em;
-    border: 1px dotted #CC6600;
+    border: 1px solid #CC6600;
+
 }
 
 #pie {
@@ -137,9 +137,15 @@ img {
 }
 
 /*deberia ser h3 para que se mostrara*/
-#lateral h2 {
+#secundario h2 {
 background-color: #DB905C;
+
 padding: .2em;
+}
+
+#secundario {
+    border: 1px solid #CC6600;
+
 }
 
 #menu {
