@@ -19,14 +19,13 @@
 
         text {
             font-size: 6rem;
+            text-shadow: 2px 2px white;
         }
 
-        td,tr,table {
-border: 1px solid black;
-        }
-
-        div {
-            display: flex;
+        td,
+        tr,
+        table {
+            border: 1px solid black;
         }
     </style>
 </head>
@@ -36,7 +35,6 @@ border: 1px solid black;
     <?php
     class Circle
     {
-
         private $size;
         private $posX;
         private $posY;
@@ -54,8 +52,6 @@ border: 1px solid black;
         {
             return $this->posX;
         }
-
-
 
         public function setPosX($posX): self
         {
@@ -91,27 +87,23 @@ border: 1px solid black;
         }
     }
 
-    $colors = array("red", "black", "green", "blue", "yellow", "brown", "pink", "purple");
+$colors = array("red", "black", "green", "blue", "yellow", "brown", "pink", "purple");
+echo "<table>\n";
+    echo "<tr>\n";
 
-    echo "<table>";
-    echo "<tr>";
+    for ($i = 0; $i <= rand(0, 10); $i++) {
+        echo "<td>\n";
+        echo "<svg height=\"300\" width=\"300\" xmlns=\"http://www.w3.org/2000/svg\">\n";
+        $circle = new Circle(rand(40, 80), 150, 150, $colors[rand(0, 7)]);  // Ajustar las coordenadas para centrar
+        $rot = rand(-80, 80);
+        echo "<circle r=\"" . $circle->getSize() . "\" cx=\"" . $circle->getPosX() . "\" cy=\"" . $circle->getPosY() . "\" fill=\"" . $circle->getColor() . "\" />\n";
+        echo '<text x="' . $circle->getPosX() . '" y="' . $circle->getPosY() . '" dominant-baseline="middle" text-anchor="middle" fill="' . $colors[rand(0, 7)] . '" transform="rotate(' . $rot . ' ' . $circle->getPosX() . ' ' . $circle->getPosY() . ')">' . ($i + 1) . '</text>\n';
+        echo "</svg>\n";
+        echo "</td>\n";
+    }
 
-for ($i=0; $i <= rand(0,10); $i++) { 
-    echo "<td>";
-    echo "<svg height=\"200\" width=\"200\" xmlns=\"http://www.w3.org/2000/svg\">";
-    $circle = new Circle(rand(40, 80), 95, 95, $colors[rand(0,7)]);
-    $rot = rand(-80, 80);
-   echo "<div>";
-        echo "<circle r=\"" . $circle->getSize() . "\" cx=\"" . $circle->getPosX() . "\" cy=\"" . $circle->getPosY() . "\" fill=\"" . $circle->getColor() . "\">";
-        echo "</circle>";
-        echo '<text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="' . $colors[rand(0,7)] . '" transform="rotate('. $rot.')">' . $i+1 . '</text>';
-    echo "</div>";
-    echo "</td>";
-    echo "</svg>";
-}
-echo "</tr>";
-
-    echo "</table>";
+    echo "</tr>\n";
+    echo "</table>\n";
     ?>
 
 </body>
