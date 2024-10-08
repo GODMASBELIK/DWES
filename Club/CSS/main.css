@@ -2,6 +2,73 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Crimson Text", serif;
+    font-style: normal;
+}
+
+
+.dropdown {
+    padding: 10px;
+    background-color: #257fa6;
+    display: inline-flex;
+}
+
+.dropdown-text {
+    /*max-height: 0;*/
+    display: none;
+
+}
+
+.dropdown:hover .dropdown-text {
+    display: block;
+    flex-direction: column;
+    align-items: flex-start;
+
+
+    /*position: absolute;*/
+    background-color: #0c5f83;
+    
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #75C0E0;
+    height: 10vh;
+    padding: 0px 20px;
+}
+
+nav ul, nav a {
+    list-style-type: none;
+    color: white;
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    align-self: center;
+    gap: 20px;
+}
+
+li {
+    display: flex;
+    align-items: center;
+
+}
+
+
+.logo {
+    background: url("/Club/Imagenes/Logo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100px;
+    display: block;
+    height: 60%;
+width: 120px;
 }
 
 
