@@ -1,27 +1,47 @@
-* {
-    font: 1em/1.3 Arial, Helveltica, sans-serif;
+.__Header_BANNER {
+background: linear-gradient(#1c5f7ca1,#1C5F7C), url("/Club/Imagenes/Banner.avif") no-repeat;
+background-size: cover;
+height: 45vh;
+color: white;
+}
+
+.__Header_CONTENT {
+    max-width: 800px;
+    margin: 0 20px;
+    padding: auto;
+}
+
+h1 {
+    font-size: 3rem;
+    padding: 20px;
 }
 
 p {
-    color: #555;
+    font-size: 1.3rem;
+    margin: 0 20px;
 }
 
-a {
-    color: #CC3300
+.__Header_CONTENT h1 {
+    color: #6ce6e8;
+    font-weight: bolder;
+}
+.__Header_CONTENT p {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    text-align: justify;
+    color: #ffffff;
+    font-weight: bold;
 }
 
-
-em { 
-    background: #FFFFCC; padding: .1em; 
+.__Main_Content {
+    display: flex;
+    background-color: #D5EBF5;
 }
 
-
-em.especial { 
-    background: #FFCC99; border: 1px solid #FF9900; padding: .1em; 
+section img {
+    width: 60%;
 }
 
-
-
-span { 
-    font-weight: bold; 
+section {
+    margin: 100px 0px;
 }
