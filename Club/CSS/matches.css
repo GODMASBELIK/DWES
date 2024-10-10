@@ -1,0 +1,53 @@
+.__container_SEASON h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+h2 {
+    text-align: center;
+}
+
+hr {
+    border: 1px solid #ccc;
+    margin-bottom: 30px;
+}
+
+.__container_NEXTMATCH {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.__container_NEXTMATCH img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.__container_NEXTMATCH h2 {
+    flex: 1;
+    text-align: center;
+    margin: 0 20px;
+    font-size: 1.2rem;
+}
+
+table {
+    width: 100%;
+    margin-top: 40px;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+}
