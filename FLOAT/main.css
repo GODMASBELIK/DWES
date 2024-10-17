@@ -1,0 +1,7 @@
+.a { float: left; height: 100px; margin: 10px;width: 100px;background-color: #2980B9;}
+.b { float: right;height: 100px; margin: 10px;width: 100px;background-color: #2980B9; }
+.c { float: right;height: 100px; margin: 10px;width: 100px;background-color: #2980B9; }
+.d { clear: both; height: 100px; margin: 10px;width: 100px;background-color: purple;}
+.e { float: left; height: 100px; margin: 10px;width: 100px;background-color: #2980B9;}
+.f { float: right; height: 100px; margin: 10px;width: 100px;background-color: #29b933;}
+
