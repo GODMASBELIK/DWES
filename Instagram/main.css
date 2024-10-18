@@ -16,8 +16,8 @@
 }
 
 .container__icon > * {
-/* filter:grayscale(100%); */
-filter: brightness(0);
+filter:grayscale(100%);
+/*filter: brightness(0);*/ //Error de imagen, commit nuevo
 
 }
 
