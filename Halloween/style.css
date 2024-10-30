@@ -1,0 +1,622 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+.crimson-text-regular {
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .crimson-text-semibold {
+    font-family: "Crimson Text", serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .crimson-text-bold {
+    font-family: "Crimson Text", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .crimson-text-regular-italic {
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .crimson-text-semibold-italic {
+    font-family: "Crimson Text", serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  .crimson-text-bold-italic {
+    font-family: "Crimson Text", serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+
+:root {
+    --first-color: #ee9135;
+    --second-color: #ac4936;
+    --third-color: #5d2b48;
+    --fourth-color: #362534;
+    --fith-color: #232323;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+
+img {
+  display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.i {
+    width: 100px;
+    height: 100px;
+}
+
+.i::before {
+    display: inline-block;
+content: "";
+        width: 100%;
+        height: 100%;
+        background-color: var(--first-color);
+        z-index: 0;
+        left: 0;
+        top: 0;
+        background-image: url("haunted2.png");
+        background-size: contain;
+        clip-path: circle(50%);
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+    height: 13vh;
+    /* background-color: var(--fourth-color); */
+    overflow: hidden;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+justify-content: space-between;
+padding: 0px 40px;
+z-index: 99999;
+background-color: black;
+}
+
+
+
+nav ul, nav li, nav a {
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+nav ul, nav {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    
+}
+
+nav ul {
+    padding: 10px;
+}
+a {
+    font-size: 1.4rem;
+}
+
+a:hover {
+    color: red;
+}
+
+header {
+    position: relative;
+color: white;
+height: 90vh;
+background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8));
+overflow: hidden;
+
+}
+
+video {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.text {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+
+  }
+
+  .evil {
+    background-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.4)), url("https://static1.srcdn.com/wordpress/wp-content/uploads/2020/02/dead-silence-2007-poster.jpg");
+    background-size: 110%;
+    background-color: black;
+    background-position:-40rem;
+    background-repeat: no-repeat;
+  height: 110vh;
+overflow: hidden;
+  z-index: 1;
+  }
+.text2 {
+  color: white;
+  height: 100%;
+  z-index: 999;
+}
+  .card-parent {
+    display: flex;
+    height: 50%;
+    margin: auto;
+height: 25vh;
+
+  }
+
+  .card {
+    text-align: center;
+    color: white;
+    width: 25%;
+    height: 85%;
+    margin: auto;
+  }
+
+  .card h1 {
+    margin-bottom: 20px;
+  }
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 40px 0px;
+
+}
+
+figure {
+  border: 2px solid rgba(0,0,0,1);
+}
+
+header p {
+    font-size: 1.5rem;
+}
+
+main {
+    position: relative;
+}
+
+section {
+  position: relative;
+width: 100%;
+z-index: -1;
+}
+
+figure {
+  transition: filter 0.2s;
+  overflow: hidden;
+}
+
+figure:hover {
+  cursor: pointer;
+  filter: contrast(0.8);
+}
+img {
+  transition: transform 0.2s;
+
+}
+figure img:hover {
+  transform: scale(110%);
+}
+
+fieldset {
+  padding: 10px;
+}
+label {
+  display: block;
+}
+
+.flex {
+  display: flex;
+}
+
+.grey {
+  padding: 20px;
+  background-color: #232323;
+}
+.tombstone {
+position: relative;
+  text-align: center;
+  margin: auto;
+}
+
+h1 {
+  background: -webkit-linear-gradient(#4b0000 60%, #ff0000);
+  background-clip: text;
+  color: transparent;
+  font-size:2.5rem;
+  font-family: "Nosifer", sans-serif;
+  padding-top: 20px;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+}
+
+.right h1 {
+  text-align: left;
+  width: 90%;
+  border-bottom: 1px solid rgba(255, 0, 0, 0.6);
+  margin: auto 0;
+}
+
+.text2 {
+  flex: 1;
+  align-self: center;
+  padding-bottom: 20rem;
+}
+
+.text2 > * {
+  padding: 20px 100px;
+}
+
+.text2 h2 {
+  font-size: 2.5rem;
+}
+
+.text2 p, .text2 span {
+  font-size: 1.5rem;
+}
+
+.right {
+width: 50%;
+overflow: hidden;
+}
+
+.left {
+    width: 60%;
+    overflow: hidden;
+}
+
+.tombstone::before {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-image: url("tombstone.png");
+  background-size: contain;
+  left: 68%;
+  top:-20%;
+  transform:translate(-50%,0%);
+  filter:contrast(0);
+  z-index: -1;
+  opacity: 20%;
+}
+
+.flex2 {
+  display: flex;
+flex-direction: row-reverse;
+height: 100%;
+
+}
+
+
+
+
+.gallery {
+display: grid;
+grid-template-columns: 15vw 15vw 15vw;
+justify-content: flex-end;
+align-content: center;
+padding-right: 10%;
+padding-top: 4%;
+  width: 100%;
+  height: 90%;
+  margin: auto;
+overflow: hidden;
+}
+
+.columns {
+  width: 90%;
+  margin: 0 auto;
+  columns: 3;
+}
+
+textarea {
+  resize: none;
+  width: 100%;
+  height: 250px;
+}
+
+.columns > * {
+  margin: 20px;
+  border: 2px solid black;
+}
+
+
+.cine {
+  position: relative;
+  height: 100vh;
+  background-color: #971f20;
+  z-index: 999;
+
+}
+
+.cine::before {
+  position: absolute;
+  right: -15%;
+  top: 20%;
+  content: "";
+  height: 400px;
+  width:810px;
+  transform: rotate(-90deg);
+  display: inline-block;
+  background-image: url("hands.png");
+  background-position: right;
+}
+
+.contacto {
+  position: relative;
+  background-color: black;
+  z-index: 1;
+}
+
+.blood 
+{
+  left: 0;
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 260px;
+  background-image: url("blood.png");
+  z-index: 1;
+}
+.contacto h2 {
+  text-align: center;
+
+}
+
+.card {
+  position: relative;
+  margin-top: 75px;
+}
+
+.card img {
+  position: absolute;
+width: 65px;
+height: 65px;
+top: 0;
+inset: 0;
+margin: 0 auto;
+top: -30%;
+}
+
+form {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  width: 80%;
+  background-color: rgb(64, 36, 104);
+  margin: 0 auto;
+  border-radius: 1rem;
+}
+
+form > * {
+  padding: 20px;
+  resize: none;
+  display: block;
+  
+}
+
+form > .right button {
+margin: 0 auto;
+  width: 100%;
+  margin-top: 9px;
+}
+
+caption {
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color:wheat;
+  padding: 20px;
+  font-family: "Rubik Distressed", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.c {
+  height: 100vh;
+  position: relative;
+  background-color: transparent;
+  z-index: 1;
+  background-repeat: no-repeat;
+  background-position: 0px 500px;
+  background-size: 500px;
+
+}
+
+a {
+  transition: all 0.2s;
+
+}
+
+.text2 button {
+  transition: all 0.2s;
+padding: 10px 40px;
+display: inline-block;
+margin: 1rem 13%;
+outline: 0;
+border: 1px solid wheat;
+background-color: transparent;
+border-radius: 3rem;
+font-size: 1.5rem;
+color: wheat;
+}
+
+.text2 button:hover {
+  background-color: wheat;
+  color: black;
+}
+
+.pontebien h2:last-child {
+  text-align: center;
+  margin-top: 5%;
+
+  
+}
+
+.contacto {
+  width: 100%;
+  padding: 40px;
+  background-color: transparent;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+
+
+
+.form-section {
+  flex: 1 1 45%;
+  min-width: 250px;
+}
+
+form fieldset {
+  border: 1px solid #555;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+form legend {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--first-color);
+}
+
+label {
+  display: block;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+body {
+  background: linear-gradient(rgba(106, 0, 255,0.1), rgba(106, 0, 255,0.1)), url("Cine/ultima.jpg");
+  background-repeat: no-repeat;
+background-position: 0px 97%;
+background-size: 110%;
+}
+
+
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="number"],
+textarea,
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #666;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #333;
+  color: #eee;
+  margin-top: 5px;
+}
+
+.radio-options {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+input[type="radio"] {
+  margin-right: 8px;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 10px;
+  flex: 1 1 100%;
+  justify-content: center;
+}
+
+button[type="reset"],
+button[type="submit"] {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button[type="reset"] {
+  background-color: #444;
+}
+
+button[type="submit"] {
+  background-color: var(--first-color);
+}
+
+button[type="submit"]:hover {
+  background-color: #ff5500;
+}
+
+
+
+footer {
+  /* position: absolute; */
+  margin-top: 50px;
+  background-color: var(--fourth-color);
+  color: white;
+  text-align: center;
+  /* padding: 20px 0; */
+  width: 100%;
+}
+
+.footer-content {
+  margin-bottom: 10px;
+}
+
+.socials {
+  margin: 10px 0;
+}
+
+.socials a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.socials a:hover {
+  color: var(--first-color);
+}
+
+.footer-bottom {
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  padding-top: 10px;
+}

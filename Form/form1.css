@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+article {
+    float: left;
+    width: 420px;
+    height: 140px;
+    background-color: #F7F3F3;
+}
+
+img {
+    display: inline-block;
+    width: 80%;
+    height: 80%;
+margin: 10px 20px; 
+}
+
+figure {
+    width: 150px;
+    float: left;
+
+}
+
+.datos-productos {
+    float: right;
+    width: 210px;
+    height: 100%;
+    padding: 20px;
+}
+
+
+
+.borrar {
+    float: right;
+    border: 1px solid;
+    border-radius: 0.3rem;
+    padding: 1px 5px;
+}
+
+
+
+.precio {
+margin-top: 5px;
+    opacity: 50%;
+    font-size: 0.8rem;
+
+}
+
+.nombre, .precio {
+    padding-left: 2px;
+    width: 100%;
+    font-weight: bold;
+    
+}
+
+.colores {
+    display: table;
+    width: 100%;
+    margin-top: 20px;
+}
+
+
+li {
+    list-style-type: none;
+    width: 20px;
+    height: 20px;
+    float: right;
+    margin: 0 7px;
+    border-radius: 1rem;
+    border: 1px solid black;
+}
+
+li:nth-child(1) {
+background-image: url("https://jmairsoft.com/wp-content/uploads/camuflaje-Digital.png");
+background-size: contain;
+}
+li:nth-child(2) {
+background-image: url("https://silverfenix7.wordpress.com/wp-content/uploads/2009/12/urbano.jpg");
+background-size: contain;
+}
+li:nth-child(3) {
+background-image: url("https://img.freepik.com/fotos-premium/patron-camuflajes-tonos-verdes-marrones_662214-28231.jpg");
+background-size: contain;
+}
+li:nth-child(4) {
+background-image: url("https://img.freepik.com/fotos-premium/patron-camuflaje-que-es-verde-naranja-blanco_902639-26652.jpg");
+background-size: contain;
+}
+li:nth-child(5) {
+    background-color: black;
+}
