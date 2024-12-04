@@ -1,0 +1,46 @@
+* {
+    overflow-x: hidden;
+}
+
+.botones {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0px;
+}
+
+.botones > button {
+width: 20%;
+
+
+}
+
+.stats {
+    border: 3px solid grey;
+    padding: 20px 0px;
+    text-align: center;
+}
+
+
+.stats > span {
+margin: 20px;
+}
+
+
+button {
+    font-weight: bolder;
+    background-color: orange;
+    border-color: orange;
+    margin-bottom: 10px;
+}
+
+.enemigoCaja {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cajaImg {
+display: flex;
+justify-content: center;
+}

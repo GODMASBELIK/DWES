@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section id="s1">
+        <h1>Titulo</h1>
+        <p>Ejemplo de documento <strong>DOM</strong> Vision de arbol</p>
+    </section>
+    <section id="s2">
+        <p>Aqui solo hay texto</p>
+    </section>
+
+
+        <ul>
+            <li class="verdura">Cebolla</li>
+            <li class="verdura">Ajo</li>
+            <li class="carne">Pollo</li>
+            <li class="verdura">Lechuga</li>
+            <li class="carne">Ternera</li>
+            <li class="hidrato">Pan</li>
+            <li class="hidrato">Arroz</li>
+            <li class="carne">Cerdo</li>
+            <li class="verdura">Tomate</li>
+            <li class="hidrato">Lentejas</li>
+        </ul>
+    <script>
+        let seccion=document.getElementById("s1");
+
+        console.log(seccion.nodeType);
+        console.log(document.nodeType);
+        console.log(seccion.nodeName);
+        console.log(document.nodeName);
+
+        let elementosP=document.getElementsByTagName("p");
+
+        console.log(elementosP.length);
+        console.log(elementosP[0]);
+
+        let verduras=document.getElementsByClassName("verdura");
+
+        verduras = document.querySelectorAll(".verduras");
+
+        document.querySelectorAll("ul li");
+        document.querySelectorAll("li:first-of-type");
+        document.querySelectorAll("li.verdura:first-of-type")
+        document.querySelectorAll("*");
+
+    </script>
+</body>
+</html>

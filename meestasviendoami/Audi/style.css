@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'AudiType';
+    src: url('AudiType-Normal_03.woff') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}  
+
+body {
+    background-color: black;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+svg {
+    margin-right: 40px;
+}
+.left {
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    align-items: center;
+
+}
+
+a {
+    color: #666666;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+button {
+    outline: 0;
+    background-color: transparent;
+    border: 0;
+}
+
+* {
+    font-family: "AudiType";
+}
+
+nav {
+    letter-spacing: 0.6px;
+    padding: 0 10em;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    height: 10vh;
+    background-color: white;
+}
+
+.img {
+    width: 0px;
+}
+

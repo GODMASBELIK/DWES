@@ -35,4 +35,17 @@ for ($i=0; $i < 3; $i++) {
 }
 echo $sum2;
 
+echo "<br><br>";
+switch ($sum1) {
+    case $sum1 > $sum2:
+        echo "Jugador 1 ha ganado";
+        break;
+        case $sum1 < $sum2:
+            echo "Jugador 2 ha ganado";
+            break;
+    default:
+        echo "Empate";
+        break;
+}
+
 ?>

@@ -1,5 +1,3 @@
-
-
 <?php
 /*
 Crea una función llamada procesarListas que reciba dos strings, cada uno
