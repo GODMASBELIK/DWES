@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .a {
+        position: relative;
+        background-color: brown;
+        width: 80%;
+        height: 10vh;
+        margin: 10vh 0;
+    }
+    .caracol, .caracol2, .caracol3 {
+        position: absolute;
+        width: 10%;
+        height: 80%;
+        top: 10%;
+        left: 2%;
+        background-color: green;
+    }
+</style>
+</head>
+<body>
+    <div class="a">
+
+        <div class="caracol">
+            
+        </div>
+    </div>
+    <div class="a">
+
+        <div class="caracol2">
+            
+        </div>
+    </div>
+    <div class="a">
+
+        <div class="caracol3">
+            
+        </div>
+    </div>
+    <button onclick="dang">Darle</button>
+    <script>
+        let c1 = document.getElementsByClassName('caracol');
+        let c2 = document.getElementsByClassName('caracol2');
+        let c3 = document.getElementsByClassName('caracol3');
+        let x;
+
+        function dang() {
+            x = Math.random();
+            console.log(x);
+        }
+    </script>
+</body>
+</html>
