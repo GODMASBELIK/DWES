@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        label {
+            display: block;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora de Precio con IVA</h1>
+    <p>Ingresa el precio base de un producto para calcular su precio total con IVA</p>
+
+    <label for="">Precio Base:</label>
+    <input type="number" id="a1">
+    <label for="">Tasa de IVA (%):</label>
+    <input type="number" id="a2">
+
+    <p id="prc">Precio Base: </p>
+    <p id="IVA">IVA: </p>
+    <p id="result">Resultado: </p>
+
+    <script>
+        const input1 = document.getElementById("a1");
+        const input2 = document.getElementById("a2");
+        const result = document.getElementById("result");
+        const precio = document.getElementById("prc");
+        const lol = document.getElementById("IVA");
+
+        function checkInputs() {
+            const value1 = parseFloat(input1.value);
+            const value2 = parseFloat(input2.value);
+
+
+            if (!isNaN(value1) && !isNaN(value2)) {
+                const calc = (value1 * value2 / 100);
+                precio.textContent = `Precio Base: ${a1.value} $`;
+                const calc2 = value1 + (value1 * value2 / 100);
+                lol.textContent = `IVA (${value2}%): ${calc} $`;
+                result.textContent = `Resultado: ${calc2.toFixed(2)} $`; 
+            } else {
+                result.textContent = "Resultado: ";
+            }
+        }
+
+        input1.addEventListener("input", checkInputs);
+        input2.addEventListener("input", checkInputs);
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="hola.css">
+</head>
+<body>
+    <main>
+        <section class="">
+            <div class="cerrar-seccion hidden">&times;</div>
+            <div class="demobox">Sección 1</div>
+        </section>
+        <section>
+            <div class="cerrar-seccion hidden">&times;</div>
+            <div class="demobox">Sección 2</div>
+        </section>
+        <section>
+            <div class="cerrar-seccion hidden">&times;</div>
+            <div class="demobox">Sección 3</div>
+        </section>
+        <section>
+            <div class="cerrar-seccion hidden">&times;</div>
+            <div class="demobox">Sección 4</div>
+        </section>
+    </main>
+
+    <script>
+        let sections = document.querySelectorAll("section");
+
+        sections.forEach(section => {
+            section.addEventListener("click", function() {
+                sections.forEach(sec => {
+                    sec.classList.remove("is-expanded");
+                    sec.classList.add("reduced");
+                    sec.querySelector(".cerrar-seccion").classList.add("hidden"); // Hide all close buttons
+                });
+
+                section.classList.add("is-expanded");
+                section.classList.remove("reduced");
+                section.querySelector(".cerrar-seccion").classList.remove("hidden");
+            });
+
+            let closeButton = section.querySelector(".cerrar-seccion");
+            closeButton.addEventListener("click", function(event) {
+                event.stopPropagation();
+
+                sections.forEach(sec => {
+                    sec.classList.remove("is-expanded");
+                    sec.classList.remove("reduced");
+                    sec.querySelector(".cerrar-seccion").classList.add("hidden");
+  
+                });
+            });
+        });
+    </script>
+</body>
+</html>

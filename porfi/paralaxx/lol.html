@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Efecto Parallax</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+    * {
+        margin: 0;
+        box-sizing: border-box;
+        padding: 0;
+    }
+.card {
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+.text {
+    background-color: black;
+    color: white;
+}
+
+h1 {
+    padding-top: 20px;
+}
+
+p {
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.img {
+    background-image: url('https://aerospaceglobalnews.com/wp-content/uploads/2024/06/Moon-mission-scaled-1.jpeg'); /* Reemplaza con tu imagen */
+    width: 100%;
+    height: 50vh;
+    background-attachment: fixed; /* Clave para el efecto Parallax */
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+    
+}
+
+.card:nth-child(3) .img {
+    background-image: url("https://media.defense.gov/2009/Jun/22/2000572352/2000/2000/0/050311-F-1234P-004.JPG");
+}
+
+img {
+    width: 100%;
+
+}
+</style>
+</head>
+<body>
+<div class="card">
+    <div class="text">
+        <h1>1. Descripcion</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et aliquid quis eaque cumque, ex dolorum cupiditate voluptatem sed inventore iure voluptatum quia magnam mollitia, placeat amet assumenda dicta. Facilis, voluptate.
+        Aliquid saepe omnis hic perferendis, odio est vel eum, nulla velit expedita eius voluptas deserunt voluptatibus unde? Amet facilis vero aliquid soluta iure molestiae debitis. Minima adipisci est sit nihil.
+        Alias, autem fuga eius beatae omnis deleniti sapiente obcaecati corrupti asperiores atque ipsam nam voluptates, perspiciatis rerum dolorum eum molestias tempore sunt? Corrupti, numquam? Ad, nulla? Autem modi vitae commodi!
+        Consectetur autem doloremque possimus quisquam, aperiam nesciunt? Vero sint enim nobis iusto autem neque in commodi incidunt a obcaecati est eius dolorem temporibus, ratione libero delectus! In maxime exercitationem repellendus?
+        Officia alias laudantium cum fuga at temporibus, quae deserunt soluta nam. Dolorum nostrum minima tenetur impedit ad quo, quae blanditiis laudantium sunt, facere praesentium enim sequi aperiam ipsam explicabo et.</p>
+    </div>
+<div class="img"></div>
+</div>
+<div class="card">
+    <div class="text">
+        <h1>2. Experiencia Personal</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et aliquid quis eaque cumque, ex dolorum cupiditate voluptatem sed inventore iure voluptatum quia magnam mollitia, placeat amet assumenda dicta. Facilis, voluptate.
+            Aliquid saepe omnis hic perferendis, odio est vel eum, nulla velit expedita eius voluptas deserunt voluptatibus unde? Amet facilis vero aliquid soluta iure molestiae debitis. Minima adipisci est sit nihil.
+            Alias, autem fuga eius beatae omnis deleniti sapiente obcaecati corrupti asperiores atque ipsam nam voluptates, perspiciatis rerum dolorum eum molestias tempore sunt? Corrupti, numquam? Ad, nulla? Autem modi vitae commodi!
+            Consectetur autem doloremque possimus quisquam, aperiam nesciunt? Vero sint enim nobis iusto autem neque in commodi incidunt a obcaecati est eius dolorem temporibus, ratione libero delectus! In maxime exercitationem repellendus?
+            Officia alias laudantium cum fuga at temporibus, quae deserunt soluta nam. Dolorum nostrum minima tenetur impedit ad quo, quae blanditiis laudantium sunt, facere praesentium enim sequi aperiam ipsam explicabo et.</p>
+    </div>
+<div class="img"></div>
+</div>
+<div class="card">
+    <div class="text">
+        <h1>3. Asi si</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et aliquid quis eaque cumque, ex dolorum cupiditate voluptatem sed inventore iure voluptatum quia magnam mollitia, placeat amet assumenda dicta. Facilis, voluptate.
+            Aliquid saepe omnis hic perferendis, odio est vel eum, nulla velit expedita eius voluptas deserunt voluptatibus unde? Amet facilis vero aliquid soluta iure molestiae debitis. Minima adipisci est sit nihil.
+            Alias, autem fuga eius beatae omnis deleniti sapiente obcaecati corrupti asperiores atque ipsam nam voluptates, perspiciatis rerum dolorum eum molestias tempore sunt? Corrupti, numquam? Ad, nulla? Autem modi vitae commodi!
+            Consectetur autem doloremque possimus quisquam, aperiam nesciunt? Vero sint enim nobis iusto autem neque in commodi incidunt a obcaecati est eius dolorem temporibus, ratione libero delectus! In maxime exercitationem repellendus?
+            Officia alias laudantium cum fuga at temporibus, quae deserunt soluta nam. Dolorum nostrum minima tenetur impedit ad quo, quae blanditiis laudantium sunt, facere praesentium enim sequi aperiam ipsam explicabo et.</p>
+    </div>
+<div class="img"></div>
+</div>
+</div>
+</body>
+</html>

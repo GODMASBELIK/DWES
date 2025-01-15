@@ -1,0 +1,218 @@
+:root {
+    --color-bottom: #c1272e;
+    --color-bt1-bt2: #d33c3c;
+    --color-cielo: rgb(17, 17, 154);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red */
+}
+
+.humo {
+    transition: all 2s;
+    opacity: 0;
+    transform: scale(0);
+}
+
+.casa:hover > .humo {
+    opacity: 1;
+    transform: scale(1);
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.ejercicio {
+    width: 600px;
+    height: 600px;
+    margin: 2vh 2vw;
+}
+
+.enunciado {
+    width: 900px;
+    height: auto;
+    margin: 2vh 2vw;
+    line-height: 1.5;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.enunciado h1, .enunciado h2 {
+    padding: 1rem 0 0.3rem 1rem;
+}
+
+.enunciado p {
+    font-size: 0.8rem;
+}
+
+
+.ejercicio {
+    position: relative;
+}
+
+.ejercicio > * {
+    position: relative;
+}
+
+
+.santa:hover {
+    transform: translate(-260%,-150%);
+    transition: 4s linear;
+
+}
+
+.contenedor {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    margin: 20px 20px;
+    background-color: var(--color-cielo);
+    overflow: hidden;
+    z-index: 0;
+}
+
+.bottom{
+    background-color: var(--color-bottom);
+    height: 70px; 
+    width: 350px;
+    bottom: 80px;
+    left: 95px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fafafa;
+    cursor: pointer;
+}
+
+.bottom > h2 {
+    opacity: 0;
+    transition: 1s opacity;
+    user-select: none;
+}
+
+.bottom:hover > h2 {
+    opacity: 1;
+}
+
+.bt1,.bt2{
+    background-color: var(--color-bt1-bt2);
+    height: 20px;
+    width: 370px;
+    position: absolute;
+    border-radius: 10px; 
+}
+.bt1 {
+    top: -10px;
+    left: -10px;
+}
+.bt2 {
+    bottom: -10px;
+    left: -10px;
+}
+
+
+.contenedor > * {
+    position: absolute;
+}
+
+.casa {
+    width: 40%;
+    height: 35%;
+    top: 52%;
+    left: 40%;
+    background-image: url('media/imgs/casa.png');
+    background-size: cover;
+    z-index: 2;
+    position: relative;
+}
+
+.casa > * {
+    position: absolute;
+}
+
+.humo {
+    width: 90%;
+    left: 33%;
+    top: -62%;
+}
+
+.puerta {
+    width: 16%;
+    height: auto;
+    bottom: 0%;
+    left: 41%;
+    z-index: 1;
+    transition: 1.2s 3s;
+
+}
+
+.hohoho {
+    transform: translate(100%, 100%);
+    transition: 6s ease-out;
+
+
+}
+
+.hohoho2 {
+    opacity: 0;
+    transition: 2s;
+}
+
+.piruleta {
+    width: 11%;
+    bottom: 0%;
+    left: 44%;
+    transition: 2s 1s;
+    transform-origin: right;
+}
+
+.puerta:hover {
+transform-origin: 0px;
+transform: rotateY(60deg);
+transition: 1.2s;
+
+}
+
+.puerta:hover ~ .piruleta {
+    opacity: 1;
+    transform: scale(3) translate(80%, -138%);
+    rotate: -400deg;
+}
+
+.copos {
+    width: 1000px;
+    height: 500px;
+    top: -500px;
+    left: -1000px;
+    border: 1px solid red;
+z-index: 1;
+}
+
+.regalo {
+    width: 10%;
+    height: auto;
+    left: 20%;
+    top: 18%;
+    opacity: 0;
+    z-index: 2;
+
+}
+
+.santa:hover ~ .regalo {
+    transition: 1s linear 2.2s;
+    opacity: 1;
+    transform: translate(0%, 490%) rotate(360deg);
+}
+
+.santa {
+    width: 50%;
+    height: auto;
+    top: 30%;
+    right: -30%;
+    z-index: 3;
+}

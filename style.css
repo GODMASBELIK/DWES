@@ -19,7 +19,7 @@ a {
 
 button {
     display: block;
-    margin: 0 auto;
+    margin: 20px auto;
     position: relative;
     outline: none;
     border: none;
@@ -30,10 +30,8 @@ button {
     line-height: 50px;
     box-sizing: border-box;
     text-align: center;
-    transition-duration: ;1s
     transition-property: transform;
     transition-delay: 0.5s;
-    transition-behavior: ease;
 
     transition: tranform 1s ease 0.5s;
 }

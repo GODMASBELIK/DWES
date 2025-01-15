@@ -1,0 +1,113 @@
+<!-- Ejercicio -->
+<!-- Realizar las operaciones básicas de suma, sustracción, división y multiplicación -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora Interactiva</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f9;
+    }
+    .calculator {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      width: 300px;
+    }
+    .calculator input {
+      width: 100%;
+      height: 50px;
+      text-align: right;
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 5px;
+    }
+    .calculator .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+    .calculator button {
+      height: 50px;
+      font-size: 1.2em;
+      background: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .calculator button:hover {
+      background: #0056b3;
+    }
+    .calculator button.operation {
+      background: #28A745;
+    }
+    .calculator button.clear {
+      background: #DC3545;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <input type="text" id="display" readonly>
+    <div class="buttons">
+      <button>7</button>
+      <button>8</button>
+      <button>9</button>
+      <button class="operation">/</button>
+      <button>4</button>
+      <button>5</button>
+      <button>6</button>
+      <button class="operation">*</button>
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <button class="operation">-</button>
+      <button>0</button>
+      <button class="clear">C</button>
+      <button class="operation">+</button>
+      <button>=</button>
+    </div>
+  </div>
+  <script>
+       let content = "";
+    let input = document.querySelector("input");
+
+    let buttons = document.querySelectorAll("button");
+
+    buttons.forEach(element => {
+        element.addEventListener("click", function() {
+            const value = element.innerHTML;
+
+            if (value === "C") {
+                content = "";
+                input.value = content;
+                return;
+            }
+
+            if (value === "=") {
+                    content = eval(content); 
+                    input.value = content;  
+                return;
+            }
+
+            content += value;
+            input.value = content;
+        });
+    });
+
+  </script>
+</body>
+</html>

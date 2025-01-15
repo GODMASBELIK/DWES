@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body {
+            background-color: #282828;
+        }
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            color: black;
+
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-align: justify;
+        }
+
+.card {
+    margin: 10% auto;
+            width: 400px;
+            height: 600px;
+            background-color: #eee;
+            border-radius: 1em;
+        }
+
+        .top {
+        background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/FullMoon2010.jpg/800px-FullMoon2010.jpg");
+            background-repeat: no-repeat;
+            background-size: contain;
+             background-size: 100%;
+            background-position: center;
+        position: relative;
+            height: 45%;
+            overflow: hidden;
+            border-radius: 1em 1em 0 0em;
+        }
+
+        h1,h2,h3,h4,h5,h6 {
+            font-weight: bolder;
+            text-align: center;
+            margin: 20px 0 5px 0;
+        }
+
+        .text p {
+            width: 90%;
+            margin: 0 auto;
+            line-height: 1.5;
+            font-weight: 600;
+        }
+
+        .top, .bottom {
+            width: 100%;
+        }
+
+        .photo {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background-color: white;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-100%);
+            border-radius: 100%;
+            overflow: hidden;
+        }
+
+        .photo::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            clip-path: circle(65px);
+            left: 0;
+            top: 0;
+            background-image: url("https://cdn.pixabay.com/photo/2023/06/13/15/05/astronaut-8061095_640.png");
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: center;
+        }
+
+    </style>
+</head>
+<body>
+<div class="card">
+    <div class="top">
+        
+    </div>
+    <div class="photo"></div>
+    <div class="bottom">
+        <div class="text">
+            <h2>Jessica Randall</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quasi quam voluptas voluptate nam laborum eos harum iste impedit sed! Nisi id officiis eveniet nemo nobis aperiam assumenda quos nostrum!</p>
+        </div>
+        <div class="icon"></div>
+    </div>
+</div>
+</body>
+</html>
