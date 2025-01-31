@@ -1,11 +1,27 @@
 <?php
 
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-
     session_start();
-    $_SESSION["Cliente"] = $_POST["cl"];
-    $_SESSION["Carrito"] = [$_POST["ar"] => $_POST["pr"] . "#" . $_POST["ca"]];
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_SESSION["carrito"])) {
+       if($_POST["cl" . $_SESSION["numero"]] == $_SESSION["cliente" . $_SESSION["numero"]]) {
+        $array = $_SESSION["carrito"];
+        $array[$_POST["ar"]] = $_POST["pr"] . "#" . $_POST["ca"];
+        $_SESSION["carrito"] = $array;
+       } else {
+        $_SESSION["numero"]++;
+        $_SESSION["cliente" . $_SESSION["numero"]] = $_POST["cl"];
+        $array[$_POST["ar"]] = $_POST["pr"] . "#" . $_POST["ca"];
+        $_SESSION["carrito"] = $array;
+       }
+    } else {
+        $_SESSION["numero"] = 0;
+        $_SESSION["cliente" . $_SESSION["numero"]] = $_POST["cl"];
+        $array[$_POST["ar"]] = $_POST["pr"] . "#" . $_POST["ca"];
+        $_SESSION["carrito"] = $array;
+    }
+
     var_dump($_SESSION);
 }
 

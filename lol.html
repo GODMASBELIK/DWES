@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitios Turísticos en Perú</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef2f3;
+        }
+
+        header {
+            background-image: url("https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Peru.svg");
+        }
+
+        .lmao {
+            font-size: 20rem;
+            color: transparent;
+            background-image: url("https://blog.centraldereservas.com/wp-content/uploads/2022/02/peru-machu-pichu-destacada.jpg");
+            background-clip: text;
+            -webkit-background-clip: text;
+            background-size: 50%;
+            text-align: center;
+            margin: 20px 0;
+            background-attachment: fixed;
+        }
+        
+        .sitio {
+            height: 50vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: var(--image);
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            background-attachment: fixed;
+        }
+
+        .sitio::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5); /* Oscurecer el fondo para mejor visibilidad del texto */
+        }
+
+        .contenido {
+            position: relative;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+            text-align: center;
+        }
+
+        .contenido h2 {
+            font-size: 24px;
+            color: #2e8b57;
+            margin-bottom: 10px;
+        }
+
+        .contenido p {
+            color: #555;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="lmao">PERU</h1>
+    </header>
+
+    <div class="sitio" style="--image: url('https://www.civitatis.com/f/pois/ChIJVVVViV-abZERJxqgpA43EDo.jpg')">
+        <div class="contenido">
+            <h2>Machu Picchu</h2>
+            <p>Ubicado en la región de Cusco, este sitio es una de las Siete Maravillas del Mundo Moderno. Machu Picchu es un antiguo complejo inca rodeado de impresionantes paisajes montañosos.</p>
+        </div>
+    </div>
+
+    <div class="sitio" style="--image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/0a/a8/57/photo4jpg.jpg?w=1200&h=-1&s=1')">
+        <div class="contenido">
+            <h2>La Montaña Vinicunca</h2>
+            <p>También conocida como la Montaña de Siete Colores, este destino sorprende con sus vibrantes tonalidades. Es ideal para quienes aman el senderismo y la fotografía.</p>
+        </div>
+    </div>
+
+    <div class="sitio" style="--image: url('https://www.peru.travel/Contenido/Atractivo/Imagen/es/32/1.1/Principal/comunidad-andina-en-el-lago-titicaca.jpg')">
+        <div class="contenido">
+            <h2>Lago Titicaca</h2>
+            <p>Situado entre Perú y Bolivia, este lago es el más alto del mundo y alberga las famosas islas flotantes de los Uros, construidas con totora.</p>
+        </div>
+    </div>
+
+    <div class="sitio" style="--image: url('https://www.kantuperutours.com/blog/wp-content/uploads/2020/04/cusco-cirty-1.jpg')">
+        <div class="contenido">
+            <h2>Ciudad de Cusco</h2>
+            <p>La antigua capital del Imperio Inca es conocida por su historia, arquitectura colonial y ruinas cercanas como Sacsayhuamán.</p>
+        </div>
+    </div>
+
+    <div class="sitio" style="--image: url('https://static.nationalgeographicla.com/files/styles/image_3200/public/valle-sagradositio-arqueologicopisaq-1.jpg?w=1900&h=1068')">
+        <div class="contenido">
+            <h2>El Valle Sagrado</h2>
+            <p>Este lugar ofrece una combinación de paisajes espectaculares, cultura tradicional y sitios arqueológicos como Pisac y Ollantaytambo.</p>
+        </div>
+    </div>
+</body>
+</html>

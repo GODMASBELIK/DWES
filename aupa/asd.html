@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #007BFF;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            border-bottom: 2px solid #007BFF;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        .flex {
+            display: flex;
+
+        }
+
+
+
+    h2 {
+        font-size: 1.5em; /* Tamaño moderado */
+        color: #333; /* Color más oscuro */
+        position: relative;
+        margin-bottom: 15px;
+        padding-bottom: 5px;
+    }
+
+    h2::after {
+        content: ""; 
+        display: block;
+        width: 50px; /* Línea decorativa */
+        height: 3px;
+        background-color: #007BFF; /* Azul destacado */
+        margin-top: 5px;
+    }
+
+    h3 {
+        font-size: 1.2em;
+        font-weight: bold;
+        color: #007BFF; /* Azul secundario */
+        margin-bottom: 5px;
+    }
+        .img {
+        width: 100px;
+        height: 120px;
+        border-radius: 50%; /* Imagen circular */
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+    }
+        .left
+         {
+            flex: 2;
+         }
+
+
+        .right {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        ul {
+        list-style: none; /* Eliminamos el estilo predeterminado */
+        padding-left: 0; /* Sin sangría inicial */
+        margin: 0;
+    }
+
+    ul li {
+        align-items: center; /* Alinea el texto con el icono */
+        margin-bottom: 10px; /* Espaciado entre elementos */
+        font-size: 1rem; /* Tamaño estándar para texto */
+        line-height: 1.5; /* Mejora la legibilidad */
+    }
+
+    ul li::before {
+        content: "&"; /* Icono personalizado */
+        color: #b92e2e; /* Color azul para el icono */
+        font-weight: bold;
+        margin-right: 10px; /* Espacio entre icono y texto */
+    }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="flex">
+            <div class="left">
+                <h1>Alexander Mancilla Ospina</h1>
+                <p><strong>Teléfono:</strong> <span>34+</span> 611-06-77-66</p>
+                <p><strong>Correo:</strong> alexandrisman18@gmail.com</p>
+                <p><strong>Ubicación:</strong> Logroño, La rioja</p>
+            </div>
+            <div class="right"><div class="img"><img src="fotoAlumnoServlet.png" alt=""></div></div>
+        </div>
+        <div class="section">
+            <h2>Objetivo Profesional</h2>
+            <p>Especializarme como desarrollador front-end, construyendo interfaces web eficientes, accesibles y con una experiencia de usuario óptima, mientras integro buenas prácticas de desarrollo y mantengo un aprendizaje continuo en tecnologías modernas.</p>
+            <p>Me gustaría realizar un estilo de diseño web estético y creativo, ofreciendo la mayor calidad posible a la empresa y/o cliente.</p>
+        </div>
+
+        <div class="section">
+            <h2>Formación Académica</h2>
+            <h3>Andalucia, Jerez de la frontera</h3>
+            <ul>
+                <li><strong>Grado:</strong> Sistemas microinformaticos</li>
+                <li><strong>Institución:</strong> IES Almunia</li>
+            </ul>
+            <h3>La rioja, Logroño</h3>
+            <ul>
+                <li><strong>Grado:</strong> Desarrollo de Aplicaciones web</li>
+                <li><strong>Institucion: </strong> IES Comercio</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Experiencia Laboral</h2>
+            <h3 style="text-transform: uppercase;">SoluPro</h3>
+            <ul>
+                <li>
+                    Periodo de prácticas de Grado Medio Residencia El Picacho (Sanlúcar de Barrameda)
+                    <p><strong>Responsabilidades:</strong>
+                         <ul>
+                             <li>Desarrollo de aplicaciones web utilizando <strong>Symfony</strong>.</p></li>
+                             <li>Configuración de Routers MicroTik.</li>
+                             <li>En ocasiones mantenimiento y montaje de equipos informáticos.</li>
+                             <li>Despligue/configuracion de servicios web. (Tomcat, HTTPs, Docker)</li>
+                         </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Habilidades</h2>
+            <ul>
+                <li>Java, PHP</li>
+                <li>HTML, CSS, JS</li>
+                <li>Photoshop, Adobe Premiere Pro</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Idiomas</h2>
+            <ul>
+                <li>Español (Nativo)</li>
+                <li>Inglés (B2)</li>
+            </ul>
+        </div>
+
+        <!-- <div class="section">
+            <h2>Intereses</h2>
+            <p></p>
+        </div> -->
+    </div>
+</body>
+</html>

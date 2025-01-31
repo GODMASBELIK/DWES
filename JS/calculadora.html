@@ -97,6 +97,10 @@
                 return;
             }
 
+            if (content.lastIndexOf(value) == "+") {
+              console.log(Error("what"));
+            }
+
             if (value === "=") {
                     content = eval(content); 
                     input.value = content;  

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Actividades</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+        .search-bar {
+            padding: 20px;
+            text-align: center;
+        }
+        .search-bar input {
+            width: 80%;
+            padding: 10px;
+            margin-right: 5px;
+        }
+        .search-bar button {
+            padding: 10px 20px;
+        }
+        .highlighted-activity {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .highlighted-activity img {
+            max-width: 40%;
+            border-radius: 8px;
+        }
+        .highlighted-activity div {
+            padding: 20px;
+        }
+        .gallery {
+            display: flex;
+            overflow-x: auto;
+            padding: 20px;
+            gap: 15px;
+            background-color: #e9e9e9;
+        }
+        .gallery .card {
+            flex: 0 0 200px;
+            background-color: #fff;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .activity-list {
+            padding: 20px;
+        }
+        .activity-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding: 15px 0;
+        }
+        .activity-item img {
+            max-width: 100px;
+            border-radius: 8px;
+        }
+        .activity-item div {
+            flex: 1;
+            margin-left: 15px;
+        }
+        .activity-item button {
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Actividades Paraescolares</h1>
+    </header>
+
+    <div class="search-bar">
+        <input type="text" placeholder="Buscar actividades...">
+        <button>Buscar</button>
+    </div>
+
+    <section class="highlighted-activity">
+        <img src="https://via.placeholder.com/400" alt="Actividad destacada">
+        <div>
+            <h2>Taller de pintura creativa</h2>
+            <p>Desarrolla tus habilidades artísticas en este taller para todas las edades.</p>
+            <button>Ver detalles</button>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <div class="card">
+            <h3>Deporte</h3>
+            <p>Entrenamiento para niños y niñas.</p>
+            <button>Ver más</button>
+        </div>
+        <div class="card">
+            <h3>Música</h3>
+            <p>Clases de guitarra y piano.</p>
+            <button>Ver más</button>
+        </div>
+        <div class="card">
+            <h3>Teatro</h3>
+            <p>Expresión corporal y actuación.</p>
+            <button>Ver más</button>
+        </div>
+    </section>
+
+    <section class="activity-list">
+        <div class="activity-item">
+            <img src="https://via.placeholder.com/100" alt="Actividad 1">
+            <div>
+                <h3>Clases de matemáticas avanzadas</h3>
+                <p>Horario: Lunes y miércoles, 16:00 - 18:00</p>
+                <p>Cuota: $50 al mes</p>
+            </div>
+            <button>Solicitar inscripción</button>
+        </div>
+
+        <div class="activity-item">
+            <img src="https://via.placeholder.com/100" alt="Actividad 2">
+            <div>
+                <h3>Yoga para niños</h3>
+                <p>Horario: Martes y jueves, 10:00 - 11:30</p>
+                <p>Cuota: $30 al mes</p>
+            </div>
+            <button>Solicitar inscripción</button>
+        </div>
+    </section>
+</body>
+</html>

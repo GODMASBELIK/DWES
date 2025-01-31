@@ -1,0 +1,248 @@
+:root {
+    /* tiempos */
+    --t-fade-tit: 4s;
+    --delay-fade-tit:1s;
+    --t-slide: 3s;
+    --delay-slide: 1.5s;
+    --t-skew: 2s;
+    --delay-skew: calc(var(--t-slide) + var(--delay-slide)) ; /* DEBES CALCULARLO CON CALC Y VARIABLES */
+    --t-info: 10s;
+    /* colores */
+    --fondo: rgb(4, 4, 43);
+    --rojo-oscuro: rgb(81, 12, 12);
+    --rojo-intenso: rgb(148, 22, 22);
+    --letras: #fafafa;
+}
+
+
+@keyframes fadeHeader {
+    0% {
+    }
+
+    100% {
+        background-color: var(--rojo-intenso);
+        box-shadow: 0 0 10px 5px red;
+
+    }
+}
+
+@keyframes slide {
+    100% {
+transform: translate(0%);
+opacity: 1;
+    }
+}
+
+@keyframes WOUWOUWOU {
+    0% {
+        transform: skew(5deg) scale(90%);
+    }
+    25% {
+        transform: skew(0deg) scale(120%);
+    }
+    50% {
+        transform: skew(-5deg) scale(90%);
+    }
+    75% {
+        transform: skew(0deg) scale(120%);
+    }
+    100% {
+        transform: skew(5deg) scale(90%);
+
+    }
+
+    
+}
+
+@keyframes border {
+    0% {
+    border: 5px solid transparent;
+
+}
+
+15% {
+    transform: rotateX(0deg);
+    border: 5px solid transparent;
+}
+
+
+30% {
+        border-top-color: white;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+    }
+    
+    45% {
+        border-right-color: white;
+        border-left-color: transparent;
+        border-bottom-color: transparent;
+    }
+    
+    60% {
+        border-bottom-color: white;
+        border-left-color: transparent;
+    }
+    75% {
+        border-left-color: white;
+    border: 5px solid white;
+
+    }
+
+    85% {
+        border: 5px solid white;
+    transform: rotateX(0deg);
+
+    }
+
+    100% {
+        transform: rotateX(-90deg);
+    }
+    
+}
+
+@keyframes border2 {
+    10% {
+        transform: rotateX(-90deg);
+
+    }
+
+    90% {
+        transform: rotateX(-90deg);
+    }
+100% {
+    transform: rotateX(0deg);
+}
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: var(--fondo);
+}
+
+main {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    width: 100%;
+    color: var(--letras);
+    margin-bottom: 50px;
+}
+
+h1 {
+    padding: 20px 0px;
+    animation: fadeHeader var(--t-fade-tit) var(--delay-fade-tit) linear forwards;
+}
+
+.principal {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: space-between;
+    gap: 80px;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    overflow: hidden;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: nowrap;
+    width: 50%;
+    height: auto;
+
+}
+
+section:nth-child(1) {
+    animation: slide var(--t-slide) var(--delay-slide) forwards;
+    transform: translate(-120%);
+    opacity: 0;
+
+
+}
+
+section:nth-child(2) {
+    animation: slide var(--t-slide) var(--delay-slide) forwards;
+    transform: translate(120%);
+    opacity: 0;
+
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: nowrap;
+}
+
+.comida {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: auto;
+}
+
+h2 {
+    text-shadow: 0px 4px 10px white;
+    animation: WOUWOUWOU var(--t-skew) var(--delay-skew) infinite;
+}
+
+figure {
+    width: 30%;
+    height: 250px;
+    text-align: center;
+    position: relative;
+
+
+}
+
+figure img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+
+}
+
+figcaption {
+    padding: 20px;
+    word-wrap: break-word;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0;
+    background-color: var(--rojo-intenso);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transform: rotateX(90deg);
+
+}
+
+
+figure:hover img {
+animation: border2 9s forwards;
+
+}
+
+figure:hover figcaption {
+
+animation: border 7s 1s forwards;
+}

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Actividades</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        header .nav-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        header .nav-buttons button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #555;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        header .nav-buttons button:hover {
+            background-color: #777;
+        }
+        .banner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            height: 50vh;
+            background-color: #e9e9e9;
+        }
+
+        .text {
+            max-width: 600px;
+        }
+        
+        .banner .text h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .banner .text p {
+            margin-bottom: 20px;
+        }
+        .banner button {
+            padding: 15px 10px;
+            border: none;
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .banner img {
+            max-width: 40%;
+            border-radius: 10px;
+        }
+        .categories {
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+            background-color: #fff;
+        }
+        .categories .category {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            text-align: center;
+            flex: 1;
+            margin: 0 10px;
+        }
+        .categories .category h3 {
+            margin-bottom: 10px;
+        }
+        .categories .category button {
+            padding: 10px;
+            border: none;
+            background-color: #555;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .categories .category button:hover {
+            background-color: #777;
+        }
+        .activities {
+            padding: 20px;
+        }
+        .activities .activity {
+            display: flex;
+            margin-bottom: 20px;
+            background-color: #fff;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+        .activities .activity img {
+            max-width: 150px;
+            border-radius: 10px;
+        }
+        .activities .activity .details {
+            flex: 1;
+            margin-left: 20px;
+        }
+        .activities .activity .details h3 {
+            margin-bottom: 10px;
+        }
+        .activities .activity .details p {
+            margin-bottom: 5px;
+        }
+        .activities .activity button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Actividades</div>
+        <div class="nav-buttons">
+            <button>Inicio</button>
+            <button>Categorías</button>
+            <button>Contacto</button>
+        </div>
+    </header>
+
+    <div class="banner">
+        <div class="text">
+            <h1>Encuentra las mejores actividades paraescolares</h1>
+            <p>Explora nuestras opciones y elige la que mejor se adapte a ti.</p>
+            <button>Ver todas las actividades</button>
+        </div>
+        <img src="https://via.placeholder.com/400" alt="Imagen destacada">
+    </div>
+
+    <section class="categories">
+        <div class="category">
+            <h3>Deportes</h3>
+            <button>Explorar</button>
+        </div>
+        <div class="category">
+            <h3>Arte</h3>
+            <button>Explorar</button>
+        </div>
+        <div class="category">
+            <h3>Idiomas</h3>
+            <button>Explorar</button>
+        </div>
+    </section>
+
+    <section class="activities">
+        <div class="activity">
+            <img src="https://via.placeholder.com/150" alt="Actividad 1">
+            <div class="details">
+                <h3>Taller de pintura creativa</h3>
+                <p>Horario: Lunes y miércoles, 16:00 - 18:00</p>
+                <p>Cuota: $50 al mes</p>
+            </div>
+            <button>Solicitar inscripción</button>
+        </div>
+
+        <div class="activity">
+            <img src="https://via.placeholder.com/150" alt="Actividad 2">
+            <div class="details">
+                <h3>Clases de guitarra</h3>
+                <p>Horario: Martes y jueves, 17:00 - 19:00</p>
+                <p>Cuota: $40 al mes</p>
+            </div>
+            <button>Solicitar inscripción</button>
+        </div>
+
+        <div class="activity">
+            <img src="https://via.placeholder.com/150" alt="Actividad 3">
+            <div class="details">
+                <h3>Fútbol infantil</h3>
+                <p>Horario: Sábados, 10:00 - 12:00</p>
+                <p>Cuota: $30 al mes</p>
+            </div>
+            <button>Solicitar inscripción</button>
+        </div>
+    </section>
+</body>
+</html>
