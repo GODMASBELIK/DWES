@@ -97,7 +97,8 @@ font-weight: 700;
 
 h3 {
      font-size: 1.6rem;
-     color: rgb(0, 255, 98) !important; 
+     color: rgb(255,255,255) !important; 
+     background-color: green;
 }
 
 .first {
