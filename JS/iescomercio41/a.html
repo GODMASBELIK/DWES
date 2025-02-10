@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caras Aleatorias</title>
+    <style>
+        .persona {
+            display: inline-block;
+            margin: 10px;
+        }
+        .persona img {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="resultado">
+
+    </div>
+    <script>
+
+fetch("https://picsum.photos/v2/list?page=2&limit=100")
+    .then(response => response.json())
+    .then(data => {
+
+        const ids = data.map(img => parseInt(data.id));
+
+        const minID = Math.min(...ids);
+        const maxID = Math.max(...ids);
+
+        console.log("Mínimo ID:", minID);
+        console.log("Máximo ID:", maxID);
+
+
+        const resultado = document.querySelector("#resultado");
+        data.forEach(element => {
+            magica = resultado.innerHTML += `<div id="${element.id}" class="persona"><img src="${element.download_url}"></div>`;
+    })
+});
+
+setTimeout(() => {
+    const dang = document.querySelectorAll("img");
+
+dang.forEach(element => {
+    console.log(element);
+});
+
+}, 3000);
+
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

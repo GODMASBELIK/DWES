@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imágenes de Picsum</title>
+    <style>
+        body {
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        .imagenes-container {
+            display: grid;
+            grid-template-columns: repeat(4, 300px); 
+            gap: 20px; 
+            justify-content: center;
+            padding: 20px;
+            flex-wrap: wrap;
+            overflow: hidden;
+        }
+
+        @media (max-width: 1200px) {
+            .imagenes-container {
+                grid-template-columns: repeat(3, 300px); 
+            }
+        }
+
+        @media (max-width: 900px) {
+            .imagenes-container {
+                grid-template-columns: repeat(2, 300px); 
+            }
+        }
+
+        @media (max-width: 600px) {
+            .imagenes-container {
+                grid-template-columns: repeat(1, 300px); 
+            }
+        }
+
+        .imagen {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Imágenes aleatorias de Picsum</h1>
+    
+    <div class="imagenes-container" id="imagenes-container">
+    </div>
+
+    <script>
+        const container = document.getElementById('imagenes-container');
+
+        const totalImages = 200;
+
+        const images = [];
+        for (let i = 1; i <= totalImages; i++) {
+            const img = document.createElement('img');
+            img.src = `https://picsum.photos/id/${i}/300/300`;
+            img.alt = `Imagen ${i}`;
+            img.classList.add('imagen');
+            container.appendChild(img);
+            images.push(img); 
+        }
+
+        function changeImages() {
+            images.forEach(img => {
+                const randomId = Math.floor(Math.random() * 1000) + 1;
+                img.src = `https://picsum.photos/id/${randomId}/300/300`;
+            });
+        }
+
+        let count = 0;
+        const intervalId = setInterval(() => {
+            changeImages();
+            count++;
+            if (count >= 10) {
+                clearInterval(intervalId); 
+            }
+        }, 200); 
+    </script>
+
+</body>
+</html>

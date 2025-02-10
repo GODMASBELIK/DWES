@@ -1,0 +1,186 @@
+/* Reset básico */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #222;
+    overflow-y: hidden;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+h1 {
+    margin: 20px 0;
+    font-size: 2rem;
+    white-space: nowrap;
+}
+
+.textLeft {
+    position: relative; 
+    margin: 20px;
+    font-size: 1.2rem;
+    max-width: 900px;
+    padding: 20px;
+    border-radius: 1em;
+}
+
+.textLeft p {
+    position: absolute;
+    top: calc(100% + (30% * var(--man)));
+    max-width: 650px;
+    text-align: justify;
+}
+
+.textLeft h2 {
+    font-family: "Press Start 2P", serif;
+    position: relative;
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    white-space: nowrap;
+    overflow: hidden;
+    letter-spacing: 1rem;
+    animation: keyboard 1s steps(3) 1s infinite normal;
+}
+
+/* Animaciones */
+@keyframes typewriter {
+    from { width: 0ch; }
+    to { width: var(--text-length, 10ch); }
+}
+
+@keyframes fade-out-right {
+    0% { opacity: 1; transform: translateX(0); }
+    100% { opacity: 0; transform: translateX(20px); }
+}
+
+@keyframes fade-in-left {
+    0% { opacity: 0; transform: translateX(-20px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes keyboard {
+    0%, 19% { border-right: 2px solid rgba(255, 255, 255, 0.75); }
+    20%, 60% { border-right: 2px solid rgba(255, 255, 255, 0); }
+    61% { border-right: 2px solid rgba(255, 255, 255, 0.75); }
+}
+
+/* Sección de perspectiva */
+.perspective {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    perspective: 600px;
+}
+
+.effect {
+    position: absolute;
+    width: 600px;
+    height: 500px;
+    background: radial-gradient(circle at center, rgba(255,0,0,1), rgba(255,0,0,0));
+    z-index: -1;
+    border-radius: 100%;
+    filter: blur(80px);
+    opacity: 0.6;
+}
+
+/* Modelos 3D */
+.shape {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.shape.active {
+    opacity: 1;
+}
+
+/* Cubo */
+.cube {
+    position: relative;
+    left: 20%;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+}
+
+.cube > div {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 2px solid white;
+    opacity: 0.9;
+}
+
+.rZ { background-color: pink; transform: translateZ(100px); }
+.lZ { background-color: blue; transform: rotateY(180deg) translateZ(100px); }
+.lX { background-color: green; transform: rotateY(-90deg) translateZ(100px); }
+.rX { background-color: red; transform: rotateY(90deg) translateZ(100px); }
+.rY { background-color: yellow; transform: rotateX(90deg) translateZ(100px); }
+.lY { background-color: black; transform: rotateX(-90deg) translateZ(100px); }
+
+/* Triángulo */
+.container {
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+
+.triangle-image {
+    width: 100%;
+    height: auto;
+    filter: invert();
+}
+  
+
+  
+@keyframes rotateTriangle {
+    0% { transform: rotateY(0deg) rotateX(30deg); }
+    100% { transform: rotateY(360deg) rotateX(30deg); }
+}
+/* Esfera */
+.sphere {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: radial-gradient(circle, white, gray);
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Controles */
+.actions {
+    position: absolute;
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+    top: 80%;
+    left: 40%;
+}
+
+.point {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 2px 2px 5px black;
+    transition: 0.1s all;
+}
+
+.point:hover { cursor: pointer; }
+
+.point.active { background-color: black; }

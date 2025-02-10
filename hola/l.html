@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Guardar respuesta en un fichero</title>
+</head>
+<body>
+<script>
+    async function fetchAndSaveToFile() {
+        try {
+            // Hacer la solicitud HTTP
+            let response = await fetch('https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits');
+            console.log(response.status); // Imprime el estado de la respuesta
+
+            // Leer el cuerpo de la respuesta como texto
+            let fullText = await response.text();
+
+            // Crear un Blob con el contenido del texto
+            let blob = new Blob([fullText], { type: 'text/plain' });
+
+            // Crear una URL para descargar el fichero
+            let url = URL.createObjectURL(blob);
+
+            // Crear un enlace para descargar el archivo
+            let a = document.createElement('a');
+            a.href = url;
+            a.download = 'respuesta.txt'; // Nombre del archivo
+            document.body.appendChild(a); // Agregar temporalmente al DOM
+            a.click(); // Simular el clic para descargar
+            document.body.removeChild(a); // Eliminar del DOM
+            URL.revokeObjectURL(url); // Liberar memoria
+
+            console.log("El contenido se guardó en el archivo 'respuesta.txt'");
+        } catch (error) {
+            // Manejar cualquier error de la solicitud
+            console.error("Hubo un error:", error);
+        }
+    }
+
+    // Llamar a la función
+    fetchAndSaveToFile();
+</script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+
+        .cube {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            transform-style: preserve-3d;
+            animation: rotate 10s infinite linear;
+        }
+
+        .cube div {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border: 2px solid #000;
+        }
+
+        .top {
+            transform: rotateX(90deg) translateZ(-100px);
+            background-color: rgba(255, 0, 0, 1);
+        }
+
+        .bottom {
+            transform: rotateX(180deg) translateZ(100px);
+            background-color: rgba(0, 255, 0, 1);
+        }
+
+        .left {
+            transform: rotateX(90deg) translateZ(100px);
+            background-color: rgba(0, 0, 255, 1);
+        }
+
+        .right {
+            transform: rotateY(90deg)  translateZ(-100PX);
+            background-color: rgba(255, 255, 0, 1);
+        }
+
+        .start {
+            transform: rotateY(180deg) translateZ(-100px);
+            background-color: rgba(255, 165, 0, 1);
+        }
+
+        .final {
+            transform: rotateY(90deg) translateZ(100px);
+            background-color: rgba(128, 0, 128, 1);
+        }
+
+        .canRotate {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            width: 800px;
+            height: 800px;
+            border: 1px solid black;
+        }
+        @keyframes rotate {
+            from {
+                transform: rotateY(0deg) rotateX(0deg);
+            }
+            to {
+                transform: rotateY(360deg) rotateX(360deg);
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="canRotate">
+        <div class="cube">
+            <div class="top"></div>
+            <div class="bottom"></div>
+            <div class="left"></div>
+            <div class="right"></div>
+            <div class="start"></div>
+            <div class="final"></div>
+        </div>
+    </div>
+
+    <script>
+        const cube = document.querySelector(".cube");
+        const rotate = document.querySelector(".canRotate");
+
+        let isMouseMoving = false;
+
+        rotate.addEventListener("mousemove", (event) => {
+            cube.style.animation = "none";
+
+            let x = event.clientX;
+            let y = event.clientY;
+
+            let rotateX = -1 * (y / window.innerHeight) * 360 - 180; 
+            let rotateY = ((x / window.innerWidth) * 360 - 180);  
+
+            cube.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+
+            isMouseMoving = true;
+        });
+
+        rotate.addEventListener("mouseleave", () => {
+            if (isMouseMoving) {
+                setTimeout(() => {
+                    cube.style.animation = "rotate 10s linear infinite";
+                    isMouseMoving = false; 
+                }, 100); 
+            }
+        });
+    </script>
+</body>
+</html>

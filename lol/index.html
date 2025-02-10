@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="flex">
+    <div class="textLeft">
+      <h1>MODELANDO CON TECNOLOGIA 3D SOLO CON CSS</h1>
+      <h2 class="h1-typewrite">CUBO</h2>
+      <p>Este cubo 3D está construido completamente con CSS utilizando transform-style: preserve-3d y animaciones para lograr un efecto de rotación continua. Cada una de sus seis caras tiene un color distinto y está posicionada correctamente en el espacio tridimensional con rotateX(), rotateY() y translateZ(). Además, la perspectiva se maneja mediante un contenedor .perspective para que la profundidad sea más realista.</p>
+      <p>El cubo puede ser utilizado como ejemplo de modelado 3D en CSS sin necesidad de JavaScript o librerías externas. La animación lo hace girar de manera fluida, permitiendo visualizar todas sus caras en movimiento.</p>
+    </div>
+    
+    <div class="perspective">
+      <div class="effect"></div>
+      <div class="cube">
+        <div class="lX"></div>
+        <div class="lY"></div>
+        <div class="lZ"></div>
+        <div class="rX"></div>
+        <div class="rY"></div>
+        <div class="rZ"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="actions">
+    <div class="point active"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+  </div>
+
+  <script>
+const cube = document.querySelector(".cube");
+
+document.body.addEventListener("mousemove", (event) => {
+    const cubeRect = cube.getBoundingClientRect(); // Obtenemos el área de la caja del cubo
+    
+    let centerX = cubeRect.left + cubeRect.width / 2; // El centro del cubo en el eje X
+    let centerY = cubeRect.top + cubeRect.height / 2; // El centro del cubo en el eje Y
+
+    let deltaX = (event.clientX - centerX) / 15; // Ajusta el valor para un movimiento más suave
+    let deltaY = (event.clientY - centerY) / 15; // Ajusta el valor para un movimiento más suave
+
+    // Aplica la transformación para girar el cubo
+    cube.style.transform = `rotateY(${deltaX}deg) rotateX(${deltaY}deg)`;
+});
+
+  </script>
+</body>
+</html>

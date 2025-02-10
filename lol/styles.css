@@ -1,0 +1,213 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+  font-family: "Roboto", serif;
+
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+} 
+
+@keyframes typewriter {
+    from { width: 0; }
+    to { width: 570px; }
+}
+
+
+body {
+    overflow-y: hidden;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #222;
+}
+
+.scene {
+    perspective: 600px;
+}
+
+.perspective {
+    position: relative !important;
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.textLeft {
+    margin: 20px;
+    font-size: 1.2rem;
+    max-width: 900px;
+    /* border: 1px solid white; */
+    padding: 20px;
+    border-radius: 1em;
+    /* background-color: black; */
+    /* filter: invert(1); */
+}
+
+.textLeft p {
+margin: 20px 0;
+}
+
+.textLeft h2 {
+    display: inline-block;
+    font-size: 8rem;
+        font-family: "Press Start 2P", serif;
+        position: relative;
+        border-right: 2px solid rgba(255, 255, 255, 0.75);
+        white-space: nowrap;
+        overflow: hidden;
+        letter-spacing: 1rem;
+        animation: typewriter 0.7s steps(4, end) 1 normal both,
+                   keyboard 1s steps(40) 1s infinite normal;
+}
+
+.effect {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0));
+    z-index: -1;
+    border-radius: 50%;
+    filter: blur(80px); 
+    opacity: 0.6;
+    transition: 1s transform;
+}
+
+.lal {
+    transform: translate(-50%, -50%) scale(0); 
+    
+}
+
+
+h1 {
+    margin: 20px 0;
+    font-size:2rem;
+
+}
+
+
+
+@keyframes rotate {
+    0% {
+        transform: rotateY(0deg) rotateX(0deg);
+    }
+    100% {
+        transform: rotateY(360deg) rotateX(360deg);
+    }
+}
+
+@keyframes keyboard {
+    0% {
+        border-right: 2px solid rgba(255, 255, 255, 0.75)
+    }
+
+    19% {
+        border-right: 2px solid rgba(255, 255, 255, 0.75)
+    }
+
+    20% {
+        border-right: 2px solid rgba(255, 255, 255, 0)
+    }
+
+    60% {
+        border-right: 2px solid rgba(255, 255, 255, 0)
+    }
+
+    61% {
+        border-right: 2px solid rgba(255, 255, 255, 0.75)
+    }
+
+
+}
+
+.cube > div {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 2px solid white;
+    opacity: 0.9;
+
+}
+.cube {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation: rotate 5s linear infinite;
+
+}
+
+.cube > div {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 2px solid white;
+    opacity: 0.9;
+}
+
+.rZ {
+    background-color: pink;
+    transform: translateZ(100px);
+}
+
+.lZ {
+    background-color: blue;
+    transform: rotateY(180deg) translateZ(100px);
+}
+
+.lX {
+    background-color: green;
+    transform: rotateY(-90deg) translateZ(100px);
+}
+
+.rX {
+    background-color: red;
+    transform: rotateY(90deg) translateZ(100px);
+}
+
+.rY {
+    background-color: yellow;
+    transform: rotateX(90deg) translateZ(100px);
+}
+
+.lY {
+    background-color: black;
+    transform: rotateX(-90deg) translateZ(100px);
+}
+
+.actions {
+    display: flex;
+     gap: 4rem;
+     justify-content: center;
+     align-items: center;
+     height: 40%;
+}
+
+.point {
+    width: 32px;
+    height: 32px;
+    border-radius: 10rem;
+    background-color: white;
+    box-shadow: 2px 2px 5px  black;
+    transition: 0.1s all;
+}
+
+.point:hover {
+    cursor: pointer;
+
+}
+
+.active {
+    background-color: black;
+
+}

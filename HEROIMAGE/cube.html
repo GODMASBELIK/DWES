@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="flex">
+    <div class="textLeft">
+      <h1>MODELANDO CON TECNOLOGIA 3D SOLO CON CSS</h1>
+      <h2 class="h1-typewrite">CUBO</h2>
+      <p style="--man: 0">Este cubo 3D está construido completamente con CSS utilizando transform-style: preserve-3d y animaciones para lograr un efecto de rotación continua.</p>
+      <p style="--man: 1.4">Cada una de sus seis caras tiene un color distinto y está posicionada correctamente en el espacio tridimensional.</p>
+    </div>
+    
+    <div class="perspective">
+      <div class="effect"></div>
+      <div class="cube shape active">
+        <div class="lX"></div>
+        <div class="lY"></div>
+        <div class="lZ"></div>
+        <div class="rX"></div>
+        <div class="rY"></div>
+        <div class="rZ"></div>
+      </div>
+      <div class="container shape">
+        <img src="https://cdn.pixabay.com/photo/2013/07/12/18/16/geometry-153158_640.png" alt="Triangle" class="triangle-image">
+    </div>
+      <div class="sphere shape"></div>
+    </div>
+
+  <div class="actions">
+    <div class="point active"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+  </div>
+
+  <script>
+const cube = document.querySelector(".cube");
+
+document.body.addEventListener("mousemove", (event) => {
+    const cubeRect = cube.getBoundingClientRect();
+    
+    let centerX = cubeRect.left + cubeRect.width / 2; 
+    let centerY = cubeRect.top + cubeRect.height / 2; 
+
+    let deltaX = (event.clientX - centerX) / 15;
+    let deltaY = (event.clientY - centerY) / 15;
+
+    cube.style.transform = `rotateY(${deltaX}deg) rotateX(${-deltaY}deg)`;
+});
+
+const title = document.querySelector(".h1-typewrite");
+const description1 = document.querySelector(".textLeft p:first-of-type");
+const description2 = document.querySelector(".textLeft p:last-of-type");
+const points = document.querySelectorAll(".point");
+
+const shapesL = [
+    { title: "CUBO", description1: "Este cubo 3D está construido completamente con CSS utilizando transform-style: preserve-3d y animaciones para lograr un efecto de rotación continua.", description2: "Cada una de sus seis caras tiene un color distinto y está posicionada correctamente en el espacio tridimensional." },
+    { title: "TRIANGULO", description1: "Este triángulo 3D está creado con CSS puro y efectos de perspectiva para dar una apariencia realista.", description2: "Su estructura se basa en transformaciones CSS que le permiten mantener una apariencia sólida y definida." },
+    { title: "ESFERA", description1: "Esta esfera 3D utiliza sombras y transformaciones CSS para lograr una apariencia redondeada.", description2: "La ilusión de profundidad se consigue a través de gradientes y sombras cuidadosamente aplicadas." }
+];
+
+function animateTitle(newTitle) {
+    title.style.animation = "fade-out-right 0.4s ease forwards";
+
+    setTimeout(() => {
+        title.style.animation = "none";
+        void title.offsetWidth; // Reinicia la animación
+
+        title.textContent = newTitle;
+
+        let textLength = newTitle.length;
+        title.style.setProperty("--steps", textLength);
+
+        if (newTitle === "CUBO") {
+            title.style.setProperty("--text-length", `${textLength + 2}ch`);
+            title.style.animation = `fade-in-left 0.4s ease forwards, typewriter 0.7s steps(${textLength}, end) 1 normal both, keyboard 1s steps(40) infinite normal`;
+        } else if (newTitle === "TRIANGULO") {
+            title.style.setProperty("--text-length", `${textLength + 5}ch`);
+            title.style.animation = `fade-in-left 0.4s ease forwards, typewriter 0.9s steps(${textLength}, end) 1 normal both, keyboard 1.2s steps(45) infinite normal`;
+        } else if (newTitle === "ESFERA") {
+            title.style.setProperty("--text-length", `${textLength + 3}ch`);
+            title.style.animation = `fade-in-left 0.4s ease forwards, typewriter 1s steps(${textLength}, end) 1 normal both, keyboard 1.5s steps(50) infinite normal`;
+        }
+    }, 400); 
+}
+
+
+function updateDescription(index) {
+    description1.style.animation = "fade-out-right 0.4s ease forwards";
+    description2.style.animation = "fade-out-right 0.4s ease forwards";
+
+    setTimeout(() => {
+        description1.style.animation = "none";
+        description2.style.animation = "none";
+        void description1.offsetWidth; 
+        void description2.offsetWidth; 
+
+        description1.textContent = shapesL[index].description1;
+        description2.textContent = shapesL[index].description2;
+
+        description1.style.animation = "fade-in-left 0.4s ease forwards";
+        description2.style.animation = "fade-in-left 0.4s ease forwards";
+    }, 400); // Espera a que termine la animación de salida
+}
+
+const shapes = document.querySelectorAll(".shape");
+
+function changeShape(index) {
+    shapesL.forEach(shape => shape.style.opacity = "0");
+    shapesL[index].style.opacity = "1";
+}
+
+function changeShape(index) {
+    shapes.forEach(shape => shape.classList.remove("active"));
+    shapes[index].classList.add("active");
+}
+
+points.forEach((point, index) => {
+    point.addEventListener("click", () => {
+        document.querySelector(".point.active").classList.remove("active");
+        point.classList.add("active");
+
+        animateTitle(shapesL[index].title);
+        updateDescription(index);
+        changeShape(index);
+    });
+});
+
+
+  </script>
+</body>
+</html>
