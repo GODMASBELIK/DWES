@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservar Consulta Psiquiátrica</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="custom.css">
+  <style>
+    body {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+            url("imgs/form-body.jpg") 
+            no-repeat center center / cover;
+    }
+    h2 {
+      text-decoration: 1px dashed  white;
+    }
+    .container {
+      padding-top: 80px; 
+    }
+
+
+
+ 
+ 
+
+
+
+    .btn-dark {
+      padding: 0.6rem 1.5rem; 
+      background-color: #007bff; 
+      border-color: #007bff; 
+    }
+
+    .btn-dark:hover {
+      background-color: #0056b3; 
+      border-color: #0056b3;
+    }
+
+  
+ 
+
+    @media (max-width: 768px) {
+      .row .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+
+      .form-container {
+        padding: 1rem;
+      }
+    }
+
+    input, textarea {
+        background-color: rgb(255, 255, 255) !important; 
+        border-color: #ccc; 
+    }
+
+    .footer {
+      background-color: #343a40;
+      color: white;
+    }
+
+    .footer p {
+      margin-bottom: 0;
+    }
+
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm fixed-top">
+    <div class="container-fluid row align-items-center">
+        <div class="col-6">
+            <div class="d-flex">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=48&h=48&fit=crop" alt="Psiquiatría Logo">
+                    <span class="mx-2 fw-bold">Psiquiatría & Psicología</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-5 col-2 d-flex justify-content-end ">
+            <form class="d-md-flex d-none mb-0">
+                <input class="form-control" type="search" placeholder="Buscar...">
+                <button class="ms-2 btn btn-outline-secondary" type="submit"><i class="fas fa-search"></i></button>
+            </form>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav small">
+            <li class="nav-item mx-2"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item mx-2"><a class="nav-link" href="consultas.html">Consultas</a></li>
+            <li class="nav-item mx-2"><a class="nav-link" id="active" href="reserva.html">Reservar</a></li>
+        </ul>
+    </div>              
+</nav>  
+
+    <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 col-md-10 col-12">
+            <div class="container py-5">
+                <div class="row justify-content-center">
+                  <div class="col-lg-10 col-md-11 col-12">
+                    <h2 class="text-center display-6 text-dark fw-bold mb-4 text-white">🖊️Reserva tu Consulta Psiquiátrica</h2>
+                    <div class="form-container bg-white shadow-sm p-4 p-md-5 rounded">
+                      <form>
+                        <div class="row gy-3">
+                          <div class="col-md-12 d-flex align-items-center gap-3">
+                            <label for="first-name" class="col-md-4 fw-bold">Nombre</label>
+                            <input type="text" class="form-control" id="first-name" name="first-name" required>
+                          </div>
+                          <div class="col-md-12 d-flex align-items-center gap-3">
+                            <label for="last-name" class="col-md-4 fw-bold">Apellidos</label>
+                            <input type="text" class="form-control" id="last-name" name="last-name" required>
+                          </div>
+                          <div class="col-md-12 d-flex align-items-center gap-3">
+                            <label for="email" class="col-md-4 fw-bold">Correo</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                          </div>
+                          <div class="col-md-12 d-flex align-items-center gap-3">
+                            <label for="phone" class="col-md-4 fw-bold">Teléfono</label>
+                            <input type="tel" class="form-control" id="phone" name="phone" required>
+                          </div>
+                          <div class="col-md-12 d-flex align-items-center gap-3">
+                            <label for="consulta" class="col-md-4 fw-bold">Consulta</label>
+                            <select class="form-select" id="consulta" name="consulta" required>
+                              <option value="individual">Individual</option>
+                              <option value="pareja">Pareja</option>
+                              <option value="infantil">Infantil</option>
+                            </select>
+                          </div>
+                          <div class="col-md-12 d-flex align-items-center gap-3">
+                            <label for="city" class="col-md-4 fw-bold">Ciudad</label>
+                            <input type="text" class="form-control" id="city" name="city" required>
+                          </div>
+                          <div class="col-md-12 d-flex align-items-center gap-3">
+                            <label for="date" class="col-md-4 fw-bold">Fecha</label>
+                            <input type="date" class="form-control" id="date" name="date" required>
+                          </div>
+                          <div class="col-md-12 d-flex align-items-center gap-3">
+                            <label for="message" class="col-md-4 fw-bold">Requisitos</label>
+                            <textarea class="form-control" id="message" name="message" rows="2"></textarea>
+                          </div>
+                        </div>
+                        <div class="d-flex justify-content-end mt-4">
+                          <button type="submit" class="btn btn-dark px-4 py-2">Reservar Consulta</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+              </div>
+              </div>
+
+              <footer class="footer text-center py-5 mt-5">        
+                <div class="mt-4">
+                    <p>© 2025 Alexander Mancilla Ospina. Todos los derechos reservados.</p>
+                </div>
+              </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

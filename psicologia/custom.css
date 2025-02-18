@@ -1,0 +1,173 @@
+
+body {
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: "black";
+    src: url("fonts/3871-font.ttf");
+}
+
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("imgs/hero.jpeg") no-repeat center center/cover;
+     height: 92vh;
+      display: flex; 
+      align-items: center;
+       justify-content: center;
+}
+.radial-f {
+    position: relative;
+}
+
+.navbar {
+    padding: 0.5rem 1rem !important; 
+  }
+
+.form-control {
+    padding: 0.7rem; 
+    font-size: 0.9rem; 
+}
+
+#consultaTabsContent {
+    border: 1px solid rgba(0, 0, 0, 0.356);
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 1em;
+}
+.wavy {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 50%;
+    top: 70%;
+    left: 0%; 
+    /* background-color: red; */
+    /* clip-path: circle(20%); */
+    /* background: radial-gradient(circle, rgba(122, 220, 253, 0.6) 0%, rgba(122, 220, 253, 0) 100%); */
+    z-index: -1;
+    background: rgb(180, 197, 255);
+    /* filter: blur(80px); */
+    clip-path: polygon(100% 0%, 0% 0% , 0.00% 100.00%, 2.00% 99.17%, 4.00% 96.75%, 6.00% 92.94%, 8.00% 88.06%, 10.00% 82.51%, 12.00% 76.75%, 14.00% 71.26%, 16.00% 66.49%, 18.00% 62.85%, 20.00% 60.63%, 22.00% 60.01%, 24.00% 61.06%, 26.00% 63.67%, 28.00% 67.64%, 30.00% 72.64%, 32.00% 78.24%, 34.00% 83.99%, 36.00% 89.41%, 38.00% 94.05%, 40.00% 97.53%, 42.00% 99.55%, 44.00% 99.94%, 46.00% 98.69%, 48.00% 95.88%, 50.00% 91.76%, 52.00% 86.66%, 54.00% 81.00%, 56.00% 75.27%, 58.00% 69.93%, 60.00% 65.42%, 62.00% 62.12%, 64.00% 60.31%, 66.00% 60.13%, 68.00% 61.60%, 70.00% 64.59%, 72.00% 68.86%, 74.00% 74.06%, 76.00% 79.75%, 78.00% 85.46%, 80.00% 90.72%, 82.00% 95.09%, 84.00% 98.20%, 86.00% 99.81%, 88.00% 99.77%, 90.00% 98.10%, 92.00% 94.92%, 94.00% 90.50%, 96.00% 85.22%, 98.00% 79.50%, 100.00% 73.82%);
+    filter: blur(0);
+}
+
+.wavy-f {
+    position: relative;
+    background-color: rgb(180, 197, 255);
+}
+
+.radial {
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    width: 600px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(122, 220, 253, 0.6) 0%, rgba(122, 220, 253, 0) 100%);
+    z-index: -1;
+    border-radius: 50%;
+    filter: blur(80px);
+
+}
+.radial2, .radial3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.radial2 {
+    background: linear-gradient(to bottom, rgba(233, 122, 253, 0.3) 0%, rgba(255, 255, 255, 0) 80%);
+    filter: blur(40px); 
+}
+
+.radial3 {
+    background: linear-gradient(to bottom, rgba(253, 122, 122, 0.3) 0%, rgba(255, 255, 255, 0) 80%);
+    filter: blur(40px); 
+}
+
+.carousel-item img {
+    width: 100% !important;
+    height: 400px !important;
+}
+
+.carousel-control-next-icon, .carousel-control-prev {
+    filter: invert(1);
+}
+
+.hero-section h1 {
+    max-width: 900px;
+    font-family: "black";
+
+}
+
+.text-s {
+    max-width: 500px;
+} 
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+}
+
+nav > * > * > * {
+    font-size: 1.2rem !important;
+}
+
+#active {
+    font-weight: bolder;
+}
+
+.navbar-brand span {
+    font-size: clamp(1.2rem, 2vw, 1.5rem) !important;
+}
+
+.navbar {
+    padding: 20px !important;
+}
+
+.object-fit {
+    object-fit: cover;
+} 
+
+.text-container p {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.text-container2 {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.text-container2 h1 {
+    text-wrap: nowrap;
+}
+
+.navbar-brand img {
+    width: 30px;
+}
+
+.first-nav {
+    padding: 1rem 20rem !important;
+    border: 1px solid rgba(0, 0, 0, 0.552);
+}
+
+.carousel-small {
+    max-width: 50%;
+    max-height: 400px;
+    margin: 0 auto; 
+    overflow: hidden;
+}
+
+.carousel-inner img {
+    width: 100%; 
+    height: auto;
+}
+
+.form-label {
+    font-size: 0.9rem; 
+  }
